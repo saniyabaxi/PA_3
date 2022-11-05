@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>HTML Component</title>
+  </head>
+  <body>
+  
+    <br />
+    Number:
+    {{ num }}
+    <br />
+
+    String:
+    {{ str }}
+    <br />
+
+    Date:
+    {{ date1 }}
+    <br />
+ 
+   Array List 
+    <ul *ngFor="let i of options">
+      <li>
+        {{ i }}
+      </li>
+    </ul>
+
+    Combo Box
+    <select>
+      
+      <option *ngFor="let i of options" >
+        <span>{{i}}</span>
+      </option>
+    </select>
+
+    <br>
+    <select  (click)="OnSelect($event)" multiple>
+     
+      <option *ngFor="let i of optionscombo" [value]="i.name">
+        <span>{{i.name}}</span>
+      </option>
+    </select>
+    <br />
+    <br />
+
+    <textarea  value="{{ selectedItem }}"></textarea>
+
+    
+  </body>
+</html>
+<router-outlet></router-outlet>

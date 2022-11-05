@@ -1,0 +1,17 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm) " class="container mt-4">
+ 
+  Username: <input type="text" id="form8Example1" formControlName="uname" class="form-control" />
+          
+  Email Address: <input type="email" id="form8Example2" formControlName="email" class="form-control" />
+
+  Full Name:   <input type="text" id="form8Example3" formControlName="fname" class="form-control" />
+
+  Password: <input type="password" id="form8Example5" formControlName="pas" class="form-control" />
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+  <br>
+  <br>
+Name: {{fname}}<br>
+Username: {{uname}}<br>
+Email: {{email}}<br>
